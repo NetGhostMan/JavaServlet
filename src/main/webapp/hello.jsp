@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%--THIS is jsp --%>
+<%!String name; %>
+request uri is <%=request.getRequestURI() %>
+<%
+name = "edison";
+out.println(name);
 
+%>
 </body>
 </html>
