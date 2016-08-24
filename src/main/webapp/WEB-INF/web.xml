@@ -9,9 +9,12 @@
     <param-name>globalData2</param-name>
     <param-value>345</param-value>
   </context-param>
+  <listener>
+  	<listener-class>com.JavaServlet.Listener.TestLister</listener-class>
+  </listener>
   <filter>
     <filter-name>TestFilter</filter-name>
-    <filter-class>com.JavaServlet.Filter.TestHilter.java</filter-class>
+    <filter-class>com.JavaServlet.Filter.TestHilter</filter-class>
     <init-param>
       <param-name>filterParam</param-name>
       <param-value>11</param-value>

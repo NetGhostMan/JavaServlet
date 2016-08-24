@@ -27,6 +27,7 @@ public class TestLister implements HttpSessionListener, ServletContextListener, 
      */
     public void sessionCreated(HttpSessionEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("sessionCreated");
     }
 
 	/**
@@ -34,6 +35,7 @@ public class TestLister implements HttpSessionListener, ServletContextListener, 
      */
     public void requestDestroyed(ServletRequestEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("requestDestroyed");
     }
 
 	/**
@@ -41,6 +43,7 @@ public class TestLister implements HttpSessionListener, ServletContextListener, 
      */
     public void requestInitialized(ServletRequestEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("requestInitialized");
     }
 
 	/**
@@ -48,6 +51,7 @@ public class TestLister implements HttpSessionListener, ServletContextListener, 
      */
     public void sessionDestroyed(HttpSessionEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("sessionDestroyed");
     }
 
 	/**
@@ -55,6 +59,7 @@ public class TestLister implements HttpSessionListener, ServletContextListener, 
      */
     public void contextDestroyed(ServletContextEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("contextDestroyed");
     }
 
 	/**
@@ -62,6 +67,7 @@ public class TestLister implements HttpSessionListener, ServletContextListener, 
      */
     public void contextInitialized(ServletContextEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("contextInitialized");
     }
 	
 }
