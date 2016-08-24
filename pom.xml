@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<version>0.0.1-SNAPSHOT</version>
-	<name>wer Maven Webapp</name>
+	<name> Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
@@ -15,7 +15,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>wer</finalName>
+		<finalName>JavaServlet</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
