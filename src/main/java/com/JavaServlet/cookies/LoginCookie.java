@@ -113,6 +113,7 @@ public class LoginCookie extends HttpServlet {
 			// 设置cookie的有效期为30分钟
 			userNameCookie.setMaxAge(30 * 60);
 		}
+	
 	}
 
 }
