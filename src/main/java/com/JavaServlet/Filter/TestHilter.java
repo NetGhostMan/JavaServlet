@@ -18,12 +18,12 @@ import javax.servlet.http.HttpSession;
 @WebFilter("/TestHilter")
 public class TestHilter implements Filter {
 
-    /**
-     * Default constructor. 
-     */
-    public TestHilter() {
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * Default constructor.
+	 */
+	public TestHilter() {
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see Filter#destroy()
@@ -36,7 +36,8 @@ public class TestHilter implements Filter {
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		// place your code here
 
@@ -44,10 +45,10 @@ public class TestHilter implements Filter {
 		System.out.println("filter doFilter method");
 		HttpServletRequest httpServletRequest = (HttpServletRequest) request;
 		HttpSession httpSession = httpServletRequest.getSession();
-		if(httpSession.getAttribute("username") == null){
+		if (httpSession.getAttribute("username") == null) {
 			HttpServletResponse httpServletResponse = (HttpServletResponse) response;
 			httpServletResponse.sendRedirect("../index.html");
-		}else{
+		} else {
 			chain.doFilter(request, response);
 		}
 	}
