@@ -69,6 +69,7 @@ public class LoginCookie extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		//asdasdasdasda
 	}
 
 }
