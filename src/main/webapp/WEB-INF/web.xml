@@ -134,9 +134,6 @@
 	<listener>
 		<listener-class>com.JavaServlet.Listener.TestLister</listener-class>
 	</listener>
-
-
-
 	<servlet-mapping>
 		<servlet-name>spring</servlet-name>
 		<url-pattern>/servlet/GetPostServlet</url-pattern>
