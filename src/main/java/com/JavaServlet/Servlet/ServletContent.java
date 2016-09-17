@@ -104,8 +104,7 @@ public class ServletContent extends HttpServlet {
 			props.load(in);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		String value = props.getProperty(key);
-		return value;
+		} 
+		return props.getProperty(key);
 	}
 }
