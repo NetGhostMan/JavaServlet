@@ -55,6 +55,34 @@
 		<servlet-name>login</servlet-name>
 		<servlet-class>com.JavaServlet.cookies.LoginCookie</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>servletSessionOne</servlet-name>
+		<servlet-class>com.JavaServlet.Servlet.ServletSessionOne</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>servletSessionTwo</servlet-name>
+		<servlet-class>com.JavaServlet.Servlet.ServletSessionTwo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>servletSessionThree</servlet-name>
+		<servlet-class>com.JavaServlet.Servlet.ServletSessionThree</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>servletSessionFour</servlet-name>
+		<servlet-class>com.JavaServlet.Servlet.ServletSessionFour</servlet-class>
+		<init-param>
+			<param-name>mychinaname</param-name>
+			<param-value>zhixiang</param-value>
+		</init-param>
+		<init-param>
+			<param-name>myenglishname</param-name>
+			<param-value>edison</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>servletSessionFive</servlet-name>
+		<servlet-class>com.JavaServlet.Servlet.ServletSessionFive</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>spring</servlet-name>
 		<url-pattern>/servlet/GetPostServlet</url-pattern>
@@ -75,4 +103,59 @@
 		<servlet-name>login</servlet-name>
 		<url-pattern>/Login</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>servletSessionOne</servlet-name>
+		<url-pattern>/servletSessionOne</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>servletSessionTwo</servlet-name>
+		<url-pattern>/servletSessionTwo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>servletSessionThree</servlet-name>
+		<url-pattern>/servletSessionThree</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>servletSessionFour</servlet-name>
+		<url-pattern>/servletSessionFour</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>servletSessionFive</servlet-name>
+		<url-pattern>/servletSessionFive</url-pattern>
+	</servlet-mapping>
+	<context-param>
+		<param-name>globalData1</param-name>
+		<param-value>123</param-value>
+	</context-param>
+	<context-param>
+		<param-name>globalData2</param-name>
+		<param-value>345</param-value>
+	</context-param>
+	<listener>
+		<listener-class>com.JavaServlet.Listener.TestLister</listener-class>
+	</listener>
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/servlet/GetPostServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Content</servlet-name>
+		<url-pattern>/servlet/Content</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletforwardExapmle</servlet-name>
+		<url-pattern>/forwardExample</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Servletforward</servlet-name>
+		<url-pattern>/forward</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/html/error/404.html</location>
+	</error-page>
 </web-app>
