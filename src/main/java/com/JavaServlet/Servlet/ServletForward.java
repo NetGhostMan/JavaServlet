@@ -38,7 +38,7 @@ public class ServletForward extends HttpServlet {
 		
 		/**
 		 * 用forward方法转发*/
-		requestDispatcher.forward(request, response);
+//		requestDispatcher.forward(request, response);
 		/**
 		 * 这是请求重定向*/
 		response.sendRedirect("forwardExample");

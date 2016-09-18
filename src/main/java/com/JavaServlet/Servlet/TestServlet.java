@@ -1,7 +1,14 @@
 package com.JavaServlet.Servlet;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Properties;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -105,6 +112,56 @@ public class TestServlet extends HttpServlet {
 		 * @see 动态共享配置文件
 		 * */
 		ctx.setAttribute("attrbute1","11");
+		
+		String mysql = "WEB-INF/classes/mysql.properties";
+		try {
+			URL url = ctx.getResource(mysql);
+			InputStream in = url.openStream();
+			
+			String str = getValue("url",in);
+			System.out.println(str);
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("###############################################");
+		
+		InputStream in2 = ctx.getResourceAsStream(mysql);
+		try {
+			String str2 = getValue("url",in2);
+			System.out.println(str2);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("##################################################");
+		
+		String string = ctx.getRealPath(mysql);
+		
+		File file = new File(string);
+		try {
+			InputStream in3 = new FileInputStream(file);
+			String str3 = getValue("url",in3); 
+			System.out.println(str3);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("###############################################");		
+	}
+
+	private String getValue(String string, InputStream in) throws IOException {
+		// TODO Auto-generated method stub
+		Properties properties = new Properties();
+		properties.load(in);
+		return properties.getProperty(string);
 	}
 	
 

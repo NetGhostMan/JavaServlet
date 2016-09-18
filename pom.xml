@@ -30,5 +30,4 @@
 	</build>
 	<artifactId>JavaServlet</artifactId>
 	<groupId>chess</groupId>
-	<packaging>war</packaging>
 </project>
